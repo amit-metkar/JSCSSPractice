@@ -43,6 +43,22 @@
     -ms-animation-iteration-count: infinite;
     -o-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    
     background-color: #CCDADB;
     width: 40px;
     height: 400px;    
