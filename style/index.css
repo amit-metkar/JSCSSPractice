@@ -28,6 +28,7 @@
 
 #div
 {
+    /*
     -webkit-animation-name: spin;
     -moz-animation-name: spin;
     -ms-animation-name: spin;
@@ -38,11 +39,11 @@
     -ms-animation-duration: 3s;
     -o-animation-duration: 3s;
     animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-iteration-count: 2;
+    -ms-animation-iteration-count: 2;
+    -o-animation-iteration-count: 2;
+    animation-iteration-count: 2;
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     -ms-animation-delay: 2s;
@@ -58,6 +59,14 @@
     -ms-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    
+    
+    -webkit-animation: spin 3s linear 3s 2 alternate both;
+    -moz-animation: spin 3s linear 3s 2 alternate both;
+    -ms-animation: spin 3s linear 3s 2 alternate both;
+    -o-animation: spin 3s linear 3s 2 alternate both;
+*/
+    animation: spin 3s linear 3s 2 alternate both;
     
     background-color: #CCDADB;
     width: 40px;
