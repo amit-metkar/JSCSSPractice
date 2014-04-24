@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="todo">
+    </div>
+    <script type="text/template" id="item-template">
+        <div>
+            <input id="todo_complete" type="checkbox" <%= completed ? 'checked="checked"' : '' %> />
+            <%= title %>
+        </div>
+    </script>
+    <script src="js/jQuery/jquery-2.1.0.min.js"></script>
+    <script src="js/Underscore/underscore-min.js"></script>
+    <script src="js/Backbonejs/backbone-min.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+</html>
