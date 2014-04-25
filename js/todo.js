@@ -1,7 +1,16 @@
-﻿var Todo = Backbone.Model.extend({
+﻿///////////////////////////////////// MODEL-START /////////////////////////////////////
+var Todo = Backbone.Model.extend({
     defaults: {
         title: '',
         completed: false
+    },
+    validate: function (attributes) {
+        if (attributes.title === undefined) {
+            return "remeber to set title for your todo";
+        }
+        if (attributes.title === null || attributes.title === '') {
+            return "Title can't be null or empty";
+        }
     },
     initialize: function () {
         console.log('Model is initialized here.');
@@ -11,6 +20,9 @@
         this.on('change:title', function (e) {
             console.log('model changed' + e);
         });
+        this.on('invalid', function (model, error) {
+            console.log(error);
+        });
     },
     setTitle: function (t) {
         this.set({
@@ -18,6 +30,10 @@
         });
     }
 });
+///////////////////////////////////// MODEL-END /////////////////////////////////////
+
+var todo3 = new Todo();
+todo3.set({ completed: true }, { validate: true });
 
 var todo1 = new Todo();
 console.log(JSON.stringify(todo1));
@@ -41,6 +57,8 @@ myTodo.set({
     completed: true
 });
 console.log(JSON.stringify(myTodo));
+
+///////////////////////////////////// VIEW-START /////////////////////////////////////
 
 var TodoView = Backbone.View.extend({
     tagName: 'li',
@@ -68,5 +86,7 @@ var TodoView = Backbone.View.extend({
 
     }
 });
+
+///////////////////////////////////// VIEW-END /////////////////////////////////////
 
 var todoView = new TodoView({ model: todo2 });
