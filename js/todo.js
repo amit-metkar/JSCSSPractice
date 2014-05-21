@@ -68,8 +68,9 @@ var TodoView = Backbone.View.extend({
         'keypress .edit': 'updateOnEnter',
         'blur .edit': 'close'
     },
-    initialize: function () {
+    initialize: function (options) {
         this.$el = $("#todo");
+        this.options = options || {};
     },
     render: function () {
         this.$el.html(this.todoTpl(this.model.toJSON()));
@@ -89,4 +90,10 @@ var TodoView = Backbone.View.extend({
 
 ///////////////////////////////////// VIEW-END /////////////////////////////////////
 
-var todoView = new TodoView({ model: todo2 });
+var todoView = new TodoView({el: $("#todo"), model: todo2 });
+
+console.log(todoView.el);
+
+//$("#todo").html(todoView.el);
+
+todoView.render();
