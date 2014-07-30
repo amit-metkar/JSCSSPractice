@@ -60,13 +60,13 @@
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     
-    
-    -webkit-animation: spin 3s linear 3s 2 alternate both;
-    -moz-animation: spin 3s linear 3s 2 alternate both;
-    -ms-animation: spin 3s linear 3s 2 alternate both;
-    -o-animation: spin 3s linear 3s 2 alternate both;
-*/
-    animation: spin 3s linear 3s 2 alternate both;
+ */   
+    -webkit-animation: spin 3s linear 1s 1 alternate forwards;
+    -moz-animation: spin 3s linear 1s 1 alternate forwards;
+    -ms-animation: spin 3s linear 1s 1 alternate forwards;
+    -o-animation: spin 3s linear 1s 1 alternate forwards;
+
+    animation: spin 3s linear 1s 1 alternate forwards;
     
     background-color: #CCDADB;
     width: 40px;
